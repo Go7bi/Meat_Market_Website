@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://127.0.0.1:8000/admin/market/product/ -->
+<html lang="en-us" dir="ltr" data-theme="auto"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Select product to change | Django site admin</title>
+<link rel="stylesheet" href="./Select product to change _ Django site admin_files/base.css">
+
+  <link rel="stylesheet" href="./Select product to change _ Django site admin_files/dark_mode.css">
+  <script src="./Select product to change _ Django site admin_files/theme.js.download" defer=""></script>
+
+
+  <link rel="stylesheet" href="./Select product to change _ Django site admin_files/nav_sidebar.css">
+  <script src="./Select product to change _ Django site admin_files/nav_sidebar.js.download" defer=""></script>
+
+
+  
+  <link rel="stylesheet" href="./Select product to change _ Django site admin_files/changelists.css">
+  
+  
+    <script src="./Select product to change _ Django site admin_files/saved_resource"></script>
+  
+  
+  
+
+
+
+
+<script src="./Select product to change _ Django site admin_files/jquery.js.download"></script>
+<script src="./Select product to change _ Django site admin_files/jquery.init.js.download"></script>
+<script src="./Select product to change _ Django site admin_files/core.js.download"></script>
+<script src="./Select product to change _ Django site admin_files/RelatedObjectLookups.js.download"></script>
+<script src="./Select product to change _ Django site admin_files/actions.js.download"></script>
+<script src="./Select product to change _ Django site admin_files/urlify.js.download"></script>
+<script src="./Select product to change _ Django site admin_files/prepopulate.js.download"></script>
+<script src="./Select product to change _ Django site admin_files/xregexp.js.download"></script>
+<script src="./Select product to change _ Django site admin_files/filters.js.download" defer=""></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Select product to change _ Django site admin_files/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" app-market model-product change-list" data-admin-utc-offset="0">
+<a href="http://127.0.0.1:8000/admin/market/product/#content-start" class="skip-to-content-link">Skip to main content</a>
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+      <header id="header">
+        <div id="branding">
+        
+<div id="site-name"><a href="http://127.0.0.1:8000/admin/">Django administration</a></div>
+
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>gobi</strong>.
+            
+            
+                
+                    <a href="http://127.0.0.1:8000/">View site</a> /
+                
+                
+                    
+                    
+                
+                
+                <a href="http://127.0.0.1:8000/admin/password_change/">Change password</a> /
+                
+                <form id="logout-form" method="post" action="http://127.0.0.1:8000/admin/logout/">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="lnX3B1Zf7aXKHULB1elsDmEceGqiwbhX10qTDAzf7Lxnsxw4EKESXWBVxUZfCjst">
+                    <button type="submit">Log out</button>
+                </form>
+                
+<button class="theme-toggle">
+  <div class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</div>
+  <div class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</div>
+  <div class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</div>
+  <svg aria-hidden="true" class="theme-icon-when-auto">
+    <use xlink:href="#icon-auto"></use>
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-dark">
+    <use xlink:href="#icon-moon"></use>
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-light">
+    <use xlink:href="#icon-sun"></use>
+  </svg>
+</button>
+
+            
+        </div>
+        
+        
+        
+      </header>
+    
+    <!-- END Header -->
+    
+      <nav aria-label="Breadcrumbs">
+        
+<div class="breadcrumbs">
+<a href="http://127.0.0.1:8000/admin/">Home</a>
+› <a href="http://127.0.0.1:8000/admin/market/">Market</a>
+› Products
+</div>
+
+      </nav>
+    
+    
+
+    <div class="main shifted" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar" aria-label="Sidebar" aria-expanded="true">
+  <input type="search" id="nav-filter" placeholder="Start typing to filter…" aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-auth module">
+      <table>
+        <caption>
+          <a href="http://127.0.0.1:8000/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        
+          <tbody><tr class="model-group">
+            
+              <th scope="row"><a href="http://127.0.0.1:8000/admin/auth/group/">Groups</a></th>
+            
+
+            
+              <td><a href="http://127.0.0.1:8000/admin/auth/group/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-user">
+            
+              <th scope="row"><a href="http://127.0.0.1:8000/admin/auth/user/">Users</a></th>
+            
+
+            
+              <td><a href="http://127.0.0.1:8000/admin/auth/user/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </tbody></table>
+    </div>
+  
+    <div class="app-market module current-app">
+      <table>
+        <caption>
+          <a href="http://127.0.0.1:8000/admin/market/" class="section" title="Models in the Market application">Market</a>
+        </caption>
+        
+          <tbody><tr class="model-catagory">
+            
+              <th scope="row"><a href="http://127.0.0.1:8000/admin/market/catagory/">Catagorys</a></th>
+            
+
+            
+              <td><a href="http://127.0.0.1:8000/admin/market/catagory/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-product current-model">
+            
+              <th scope="row"><a href="http://127.0.0.1:8000/admin/market/product/" aria-current="page">Products</a></th>
+            
+
+            
+              <td><a href="http://127.0.0.1:8000/admin/market/product/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </tbody></table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <main id="content-start" class="content" tabindex="-1">
+        
+          
+            <ul class="messagelist">
+              <li class="success">The product “<a href="http://127.0.0.1:8000/admin/market/product/86/change/">Rk King Fish Dry</a>” was added successfully.</li>
+            </ul>
+          
+        
+        <!-- Content -->
+        <div id="content" class="">
+          
+          <h1>Select product to change</h1>
+          
+          
+  <div id="content-main">
+    
+        <ul class="object-tools">
+          
+            
+
+
+  
+  <li>
+    
+    <a href="http://127.0.0.1:8000/admin/market/product/add/" class="addlink">
+      Add product
+    </a>
+  </li>
+  
+
+
+          
+        </ul>
+    
+    
+    <div class="module" id="changelist">
+      <div class="changelist-form-container">
+        
+
+
+        
+
+        <form id="changelist-form" method="post" novalidate=""><input type="hidden" name="csrfmiddlewaretoken" value="lnX3B1Zf7aXKHULB1elsDmEceGqiwbhX10qTDAzf7Lxnsxw4EKESXWBVxUZfCjst">
+        
+
+        
+          
+<div class="actions">
+  
+    
+    <label>Action: <select name="action" required="">
+  <option value="" selected="">---------</option>
+
+  <option value="delete_selected">Delete selected products</option>
+
+</select></label><input type="hidden" name="select_across" value="0" class="select-across">
+    
+    
+    <button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
+    
+    
+    
+        <span class="action-counter" data-actions-icnt="86">0 of 86 selected</span>
+        
+    
+    
+  
+</div>
+
+          
+
+
+<div class="results">
+<table id="result_list">
+<thead>
+<tr>
+
+<th scope="col" class="action-checkbox-column">
+   
+   <div class="text"><span><input type="checkbox" id="action-toggle" aria-label="Select all objects on this page for an action"></span></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="column-__str__">
+   
+   <div class="text"><span>Product</span></div>
+   <div class="clear"></div>
+</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="86" class="action-select" aria-label="Select this object for an action - Rk King Fish Dry"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/86/change/">Rk King Fish Dry</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="85" class="action-select" aria-label="Select this object for an action - Octorika Dry Silver Belly"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/85/change/">Octorika Dry Silver Belly</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="84" class="action-select" aria-label="Select this object for an action - Octorika Dry Anchovy Fish (40G)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/84/change/">Octorika Dry Anchovy Fish (40G)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="83" class="action-select" aria-label="Select this object for an action - Octorika Dry Tuna Fish (80G)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/83/change/">Octorika Dry Tuna Fish (80G)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="82" class="action-select" aria-label="Select this object for an action - Octorika Dry Prawns (50G)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/82/change/">Octorika Dry Prawns (50G)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="81" class="action-select" aria-label="Select this object for an action - Octorika Dry Queen Fish (70G)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/81/change/">Octorika Dry Queen Fish (70G)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="80" class="action-select" aria-label="Select this object for an action - Rk Dry Small Shrimps (100G)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/80/change/">Rk Dry Small Shrimps (100G)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="79" class="action-select" aria-label="Select this object for an action - Rk Dry Nathal (100G)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/79/change/">Rk Dry Nathal (100G)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="78" class="action-select" aria-label="Select this object for an action - Guntur Fish Pickle"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/78/change/">Guntur Fish Pickle</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="77" class="action-select" aria-label="Select this object for an action - Guntur Mutton Pickle"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/77/change/">Guntur Mutton Pickle</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="76" class="action-select" aria-label="Select this object for an action - Guntur Prawn Pickle"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/76/change/">Guntur Prawn Pickle</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="75" class="action-select" aria-label="Select this object for an action - Guntur Chicken Pickle"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/75/change/">Guntur Chicken Pickle</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="74" class="action-select" aria-label="Select this object for an action - White Eggs (Pack Of 30)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/74/change/">White Eggs (Pack Of 30)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="73" class="action-select" aria-label="Select this object for an action - Quail Eggs - Pack of 12"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/73/change/">Quail Eggs - Pack of 12</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="72" class="action-select" aria-label="Select this object for an action - Country Eggs - Pack of 12"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/72/change/">Country Eggs - Pack of 12</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="71" class="action-select" aria-label="Select this object for an action - White Eggs – Pack Of 6"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/71/change/">White Eggs – Pack Of 6</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="70" class="action-select" aria-label="Select this object for an action - Butter Chicken Sausage"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/70/change/">Butter Chicken Sausage</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="69" class="action-select" aria-label="Select this object for an action - Chicken Breakfast Sausage ( Krauker)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/69/change/">Chicken Breakfast Sausage ( Krauker)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="68" class="action-select" aria-label="Select this object for an action - Chicken Cooked Salami"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/68/change/">Chicken Cooked Salami</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="67" class="action-select" aria-label="Select this object for an action - German Style Chicken Cheese &amp; Chili Sausage"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/67/change/">German Style Chicken Cheese &amp; Chili Sausage</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="66" class="action-select" aria-label="Select this object for an action - Red Paprika Chicken Salami"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/66/change/">Red Paprika Chicken Salami</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="65" class="action-select" aria-label="Select this object for an action - Smoked Chicken Frankfurter"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/65/change/">Smoked Chicken Frankfurter</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="64" class="action-select" aria-label="Select this object for an action - Hyderabadi Chicken tikka 200 gms + Kali Mirchi Tikka 200 gms"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/64/change/">Hyderabadi Chicken tikka 200 gms + Kali Mirchi Tikka 200 gms</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="63" class="action-select" aria-label="Select this object for an action - Chicken Curry Cut (Skin On) [480Gms - 500Gms] + Chicken Drumsticks [280Gms - 360Gms]"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/63/change/">Chicken Curry Cut (Skin On) [480Gms - 500Gms] + Chicken Drumsticks [280Gms - 360Gms]</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="62" class="action-select" aria-label="Select this object for an action - Mathi [Gross: 480Gms - 520Gms Net: 240Gms - 260Gms] + Sankara [Gross: 480Gms - 500Gms Net: 330Gms - 420Gms]"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/62/change/">Mathi [Gross: 480Gms - 520Gms Net: 240Gms - 260Gms] + Sankara [Gross: 480Gms - 500Gms Net: 330Gms - 420Gms]</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="61" class="action-select" aria-label="Select this object for an action - Chicken Curry Cut (Skin Off) [480Gms - 500Gms] + Rohu [Gross: 800Gms - 1100Gms Net: 560Gms - 840Gms]"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/61/change/">Chicken Curry Cut (Skin Off) [480Gms - 500Gms] + Rohu [Gross: 800Gms - 1100Gms Net: 560Gms - 840Gms]</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="60" class="action-select" aria-label="Select this object for an action - Biryani Cut (Skin Off) [480Gms - 500Gms] + Chicken Liver [190Gms - 210Gms]"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/60/change/">Biryani Cut (Skin Off) [480Gms - 500Gms] + Chicken Liver [190Gms - 210Gms]</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="59" class="action-select" aria-label="Select this object for an action - Chicken Breast Boneless [240Gms - 280Gms] + Chicken Curry Cut (Skin On) [480Gms - 500Gms]"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/59/change/">Chicken Breast Boneless [240Gms - 280Gms] + Chicken Curry Cut (Skin On) [480Gms - 500Gms]</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="58" class="action-select" aria-label="Select this object for an action - Chicken Curry Cut - Skin Off (500 g) + Mutton curry cut (480- 500 g)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/58/change/">Chicken Curry Cut - Skin Off (500 g) + Mutton curry cut (480- 500 g)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="57" class="action-select" aria-label="Select this object for an action - Chicken Curry Cut - Skin Off (480-500 Gms) + Mutton Curry Cut (460-480 Gms) + Prawns - Medium - Deshelled (240-270 Gms)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/57/change/">Chicken Curry Cut - Skin Off (480-500 Gms) + Mutton Curry Cut (460-480 Gms) + Prawns - Medium - Deshelled (240-270 Gms)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="56" class="action-select" aria-label="Select this object for an action - Hyderabadi Fiery Wings"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/56/change/">Hyderabadi Fiery Wings</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="55" class="action-select" aria-label="Select this object for an action - Chicken Pakoda"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/55/change/">Chicken Pakoda</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="54" class="action-select" aria-label="Select this object for an action - Chicken Barbeque"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/54/change/">Chicken Barbeque</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="53" class="action-select" aria-label="Select this object for an action - Tandoori Quail"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/53/change/">Tandoori Quail</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="52" class="action-select" aria-label="Select this object for an action - Guntur Chicken - Boneless"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/52/change/">Guntur Chicken - Boneless</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="51" class="action-select" aria-label="Select this object for an action - Garlic Chilli Wings"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/51/change/">Garlic Chilli Wings</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="50" class="action-select" aria-label="Select this object for an action - Chicken Chukka"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/50/change/">Chicken Chukka</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="49" class="action-select" aria-label="Select this object for an action - Smoky Chicken Tandoori Drumsticks"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/49/change/">Smoky Chicken Tandoori Drumsticks</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="48" class="action-select" aria-label="Select this object for an action - Chilli Garlic Coriander Chicken - Boneless"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/48/change/">Chilli Garlic Coriander Chicken - Boneless</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="47" class="action-select" aria-label="Select this object for an action - Spicy Lemone Chicken - Boneless"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/47/change/">Spicy Lemone Chicken - Boneless</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="46" class="action-select" aria-label="Select this object for an action - Mutton Chukka"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/46/change/">Mutton Chukka</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="45" class="action-select" aria-label="Select this object for an action - Pichu Potta Kozhi - Shredded Chicken Tawa Fry"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/45/change/">Pichu Potta Kozhi - Shredded Chicken Tawa Fry</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="44" class="action-select" aria-label="Select this object for an action - Karuveppilai Chicken"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/44/change/">Karuveppilai Chicken</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="43" class="action-select" aria-label="Select this object for an action - Pepper Chicken"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/43/change/">Pepper Chicken</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="42" class="action-select" aria-label="Select this object for an action - Peri Peri Chicken Drumsticks"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/42/change/">Peri Peri Chicken Drumsticks</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="41" class="action-select" aria-label="Select this object for an action - Madras Chicken 65"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/41/change/">Madras Chicken 65</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="40" class="action-select" aria-label="Select this object for an action - Shark"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/40/change/">Shark</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="39" class="action-select" aria-label="Select this object for an action - Murrel Fish / Koramenu"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/39/change/">Murrel Fish / Koramenu</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="38" class="action-select" aria-label="Select this object for an action - Silver Belly / Karai Podi"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/38/change/">Silver Belly / Karai Podi</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="37" class="action-select" aria-label="Select this object for an action - White Pomfret"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/37/change/">White Pomfret</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="36" class="action-select" aria-label="Select this object for an action - Three Spot Crab / Kan Nandu"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/36/change/">Three Spot Crab / Kan Nandu</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="35" class="action-select" aria-label="Select this object for an action - Red Mullet / Nagarai"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/35/change/">Red Mullet / Nagarai</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="34" class="action-select" aria-label="Select this object for an action - Squid"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/34/change/">Squid</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="33" class="action-select" aria-label="Select this object for an action - Trevally"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/33/change/">Trevally</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="32" class="action-select" aria-label="Select this object for an action - Barracuda /Sheela"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/32/change/">Barracuda /Sheela</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="31" class="action-select" aria-label="Select this object for an action - Emperor / Vilai Meen"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/31/change/">Emperor / Vilai Meen</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="30" class="action-select" aria-label="Select this object for an action - Indian Mackerel"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/30/change/">Indian Mackerel</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="29" class="action-select" aria-label="Select this object for an action - Lady Fish"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/29/change/">Lady Fish</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="28" class="action-select" aria-label="Select this object for an action - Catla Bengali Cut - With Head"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/28/change/">Catla Bengali Cut - With Head</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="27" class="action-select" aria-label="Select this object for an action - Freshwater Pomfret - Yeri Vavval"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/27/change/">Freshwater Pomfret - Yeri Vavval</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="26" class="action-select" aria-label="Select this object for an action - Rohu Bengali Cut - With Head"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/26/change/">Rohu Bengali Cut - With Head</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="25" class="action-select" aria-label="Select this object for an action - Sankara"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/25/change/">Sankara</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="24" class="action-select" aria-label="Select this object for an action - Seer Fish / Vanjaram"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/24/change/">Seer Fish / Vanjaram</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="23" class="action-select" aria-label="Select this object for an action - Prawns Medium - Deshelled [1 KG]"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/23/change/">Prawns Medium - Deshelled [1 KG]</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="22" class="action-select" aria-label="Select this object for an action - Boti Set"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/22/change/">Boti Set</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="21" class="action-select" aria-label="Select this object for an action - Goat Kidney"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/21/change/">Goat Kidney</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="20" class="action-select" aria-label="Select this object for an action - Goat Brain"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/20/change/">Goat Brain</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="19" class="action-select" aria-label="Select this object for an action - Free Range Mutton Rib Chops"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/19/change/">Free Range Mutton Rib Chops</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="18" class="action-select" aria-label="Select this object for an action - Mutton Liver"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/18/change/">Mutton Liver</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="17" class="action-select" aria-label="Select this object for an action - Premium Goat Curry Cut [1 KG]"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/17/change/">Premium Goat Curry Cut [1 KG]</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="16" class="action-select" aria-label="Select this object for an action - Free Range Goat Biryani Cut"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/16/change/">Free Range Goat Biryani Cut</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="15" class="action-select" aria-label="Select this object for an action - Free Range Mutton Mince"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/15/change/">Free Range Mutton Mince</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="14" class="action-select" aria-label="Select this object for an action - Free Range Mutton Boneless"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/14/change/">Free Range Mutton Boneless</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="13" class="action-select" aria-label="Select this object for an action - Leg Curry Cut (Front / Back Leg)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/13/change/">Leg Curry Cut (Front / Back Leg)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="12" class="action-select" aria-label="Select this object for an action - Chicken Wings"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/12/change/">Chicken Wings</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="11" class="action-select" aria-label="Select this object for an action - Minced Chicken"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/11/change/">Minced Chicken</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="10" class="action-select" aria-label="Select this object for an action - Country Chicken"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/10/change/">Country Chicken</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="9" class="action-select" aria-label="Select this object for an action - Chicken Liver"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/9/change/">Chicken Liver</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="8" class="action-select" aria-label="Select this object for an action - Chicken Whole Leg"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/8/change/">Chicken Whole Leg</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="7" class="action-select" aria-label="Select this object for an action - Chicken Lollipop"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/7/change/">Chicken Lollipop</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="6" class="action-select" aria-label="Select this object for an action - Chicken Drumsticks"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/6/change/">Chicken Drumsticks</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="5" class="action-select" aria-label="Select this object for an action - Chicken Boneless (Cubes) (1 Kg)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/5/change/">Chicken Boneless (Cubes) (1 Kg)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="4" class="action-select" aria-label="Select this object for an action - Chicken Boneless (Cubes)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/4/change/">Chicken Boneless (Cubes)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3" class="action-select" aria-label="Select this object for an action - Chicken Breast Boneless"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/3/change/">Chicken Breast Boneless</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2" class="action-select" aria-label="Select this object for an action - Chicken Curry Cut (Skin On)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/2/change/">Chicken Curry Cut (Skin On)</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1" class="action-select" aria-label="Select this object for an action - Chicken Curry Cut (Skin Off)"></td><th class="field-__str__"><a href="http://127.0.0.1:8000/admin/market/product/1/change/">Chicken Curry Cut (Skin Off)</a></th></tr>
+
+</tbody>
+</table>
+</div>
+
+
+          
+        
+        
+
+<p class="paginator">
+
+86 products
+
+
+</p>
+
+        </form>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </main>
+    </div>
+</div>
+<!-- END Container -->
+
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"></path><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"></path></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"></path><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"></path></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"></path><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></symbol>
+</svg>
+<!-- END SVGs -->
+
+
+</body></html>
