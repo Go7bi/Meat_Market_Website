@@ -1,0 +1,45 @@
+{% extends 'market/layouts/main.html' %}
+{% block title %}
+Registration | MeatMarket
+{% endblock title %}
+{% block content %}
+<section class="py-5 text-center container" style="margin-top:70px; background-color: #f0f0f0; border-radius: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light display-4" style="color: #3498db;">Bestsellers</h1>
+        <p class="lead text-muted" style="color: #666;">Our most popular Meatery based on sales. Updated hourly.</p>
+        <p>
+          <a href="" class="btn btn-primary my-2" style="background-color: #e74c3c; border-color: #e74c3c;">Already User</a>
+          <a href="" class="btn btn-secondary my-2" style="background-color: #2ecc71; border-color: #2ecc71;">Register</a>
+        </p>
+        <div class="mt-4">
+          <hr class="w-25 mx-auto" style="border-top: 2px solid #3498db;">
+          <p class="small text-muted" style="color: #999;">Discover our top-selling meats at the Meatery</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   
+  <section class="bg-white py-4 my-5" style="min-height:600px;">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="mb-3 text-dark">Categories</h4>
+        <hr style="border-color:#ccc;">
+      </div>
+      {% for item in catagory %}
+      <div class="col-md-4 col-lg-3">
+        <div class="card my-3 border-0" style="background-color: #f7f7f7; height: 300px;">
+          <img src="{{item.image.url}}" class="card-image-top" alt="Categories" style="width: 200px; height: 150px; object-fit: cover; border-radius: 10px;">
+          <div class="card-body">
+            <h5 class="card-title text-secondary">{{ item.name }}</h5>
+            <p class="card-text text-muted">{{ item.description|truncatechars:100 }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  
+  {% endblock content %}
+  
