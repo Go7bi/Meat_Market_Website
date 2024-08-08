@@ -1,0 +1,72 @@
+{% extends 'market/layouts/main.html' %}
+
+{% block title %}
+MeatMarket | Online Shopping Destination
+{% endblock title %}
+
+{% block content %}
+<style>
+.btn-primary {
+  background-color: #008000; /* Green color */
+  border-color: #008000; /* Green color */
+}
+
+.pic-box {
+    position: relative;
+}
+
+.hot {
+  position: absolute;
+  top: 3px;
+  left: 10px;
+  background-color: #f46eb1; /* Pink color */
+  color: #FFFFFF; /* White text color */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+</style>
+
+<section class="bg-light py-4 my-5" style="min-height:600px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="mb-3">{{products}} Details</h4>
+        <hr style="border-color:#b8bfc2;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+              <li class="breadcrumb-item"><a href="{% url 'category' products.category.name  %}">Category</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{products}}</li>
+            </ol>
+          </nav>
+      </div>
+      <div class="col-4 my-3 pic-box">
+        {% if products.trending %}
+        <div class="hot">best seller</div>
+        {% endif %}
+        <img src="{{products.product_image.url}}" width="400" height="300" class="card-image-top" alt="{{products}}">
+      </div>
+      <div class="col-8 my-3">
+        <h5 class="text-success" style="font-weight: bold; color: #00698f;">{{products}}</h5>
+        <p style="font-size: 18px; color: #ff0000;">{{products.vendor}}</p>
+        <p style="font-size: 16px; color: #777;">{{products.description}}</p>
+        <h6 class="my-2" style="text-decoration: line-through; color: #999;">Current Price: Rs. {{products.original_price}}</h6>
+        <h5 class="my-2" style="color: #008000;">Offer Price : Rs.{{products.selling_price}}</h5>
+        <div class="my-3">
+          {% if products.quantity > 0 %}
+          <button class="btn btn-primary"><i class="fa fa-cart"></i> Add to Cart</button>
+          {% else %}
+            <button class="btn btn-secondary"><i class="fa fa-minus"></i> Out of Stock</button>
+          {% endif %}
+          <button class="btn btn-danger"><i class="fa fa-heart"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
