@@ -1,0 +1,33 @@
+{% extends 'market/layouts/main.html' %}
+
+{% block title %}
+  Payment | MeatMarket
+{% endblock title %}
+
+{% block content %}
+  <section class="payment-section bg-light py-4 my-5" style="min-height:600px; background-color: #f7f7f7; background-image: linear-gradient(to bottom, #f7f7f7, #fff);">
+    <div class="container" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+      <div class="row justify-content-center">
+        <div class="col-12" style="text-align: center; margin-bottom: 20px;">
+          <h4 class="mb-3" style="color: #00698f; font-weight: bold; font-size: 24px; text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">Payment</h4>
+        </div>
+        <div class="col-12" style="margin-bottom: 20px;">
+          <h5 style="color: #333; font-weight: bold; font-size: 18px; margin-bottom: 10px;">Products in Cart:</h5>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            {% for item in cart %}
+              <li style="margin-bottom: 10px; font-size: 16px; color: #666;">{{ item.product.name }} (x{{ item.product_qty }}) - ₹{{ item.total_cost }}</li>
+            {% endfor %}
+          </ul>
+          <h5 style="color: #333; font-weight: bold; font-size: 18px; margin-bottom: 20px;">Total Amount: ₹{{ total }}</h5>
+        </div>
+        <div class="col-12">
+          <form method="post" style="max-width: 400px; margin: 40px auto; padding: 20px; background-color: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary btn-sm" style="background-color: #00698f; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">Pay Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock content %}

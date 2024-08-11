@@ -1,0 +1,29 @@
+{% extends 'market/layouts/main.html' %}
+{% block title %}
+  Card Details | Meat Market
+{% endblock title %}
+{% block content %}
+    <h1 style="color: #00698f;">Card Details</h1>
+
+    <form method="post" style="max-width: 500px; margin: 40px auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        {% csrf_token %}
+        <div style="margin-bottom: 20px;">
+            {{ form.card_number.label }}
+            {{ form.card_number }}
+        </div>
+        <div style="margin-bottom: 20px;">
+            {{ form.expiration_date.label }}
+            {{ form.expiration_date }}
+        </div>
+        <div style="margin-bottom: 20px;">
+            {{ form.cvv.label }}
+            {{ form.cvv }}
+        </div>
+        <div style="margin-bottom: 20px;">
+            {{ form.cardholder_name.label }}
+            {{ form.cardholder_name }}
+        </div>
+        <button type="submit" style="background-color: #00698f; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Pay Now</button>
+    </form>
+
+{% endblock content %}
