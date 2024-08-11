@@ -1,16 +1,17 @@
 {% extends 'market/layouts/main.html' %}
 {% block title %}
-  Registration | MeatMarket
+  Cart | MeatMarket
 {% endblock title %}
 {% block content %}
   <section class="bg-light py-4 my-5" style="min-height:600px;">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h4 class="mb-3">Cart  Items</h4>
+          <h4 class="mb-3">Cart Items</h4>
           <hr style="border-color:#b8bfc2;">
         </div>
       
+        {% if cart %}
         <table>
             <tr>
                 <th>Image</th>
@@ -37,12 +38,20 @@
               <td></td>
               <td colspan="2"><b>Total Amount</b></td>
               <th id="net">0</th>
-              <td><button class="btn btn-primary btn-sm">
-                <i class="fa fa-check-circle"></i> Check Out
-              </button></td>
+          </tr>
+            <tr>
+              <td colspan="5">
+                <button class="btn btn-primary btn-sm">
+                  <a href="{% url 'payment' %}" style="color: white;">
+                    <i class="fa fa-check-circle"></i> Check Out
+                  </a>
+                </button>
+              </td>
             </tr>
-           
         </table>
+        {% else %}
+        <p>Your cart page is empty.</p>
+        {% endif %}
        
       </div>
       </div>
