@@ -1,10 +1,12 @@
 from django.http import  JsonResponse
 from django.shortcuts import redirect, render
-from market.form import CustomUserForm
+from market.forms import CustomUserForm
 from . models import *
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
 import json
+from market.forms import PaymentForm
+from .forms import CardForm
 
 def home(request):
     products = Product.objects.filter(trending = 1)
@@ -130,3 +132,56 @@ def product_details(request,cname,pname):
       messages.error(request,"No Such Catagory Found")
       return redirect('category')
     
+
+def payment_page(request):
+    cart = Cart.objects.filter(user=request.user)
+    total = sum([item.total_cost for item in cart])
+    if request.method == 'POST':
+        form = PaymentForm(request.POST)
+        if form.is_valid():
+            order = Order()
+            order.user = request.user
+            order.name = form.cleaned_data['name']
+            order.email = form.cleaned_data['email']
+            order.phone = form.cleaned_data['phone']
+            order.address = form.cleaned_data['address']
+            order.payment_method = form.cleaned_data['payment_method']
+            order.total = total
+            if order.payment_method == 'online':  # Check if payment method is online
+              order.save()  # Save the order object here
+              return redirect('card_details', order_id=order.id)
+            
+            
+            else:
+                order.save()
+                for item in cart:
+                    item.delete()
+                return redirect("payment_success")
+        else:
+            return redirect("payment_failure")
+    else:
+        form = PaymentForm()
+    return render(request, "market/payment.html", {"cart": cart, "total": total, "form": form})
+
+
+
+def card_details(request, order_id):
+    order = Order.objects.get(id=order_id)
+    cart = Cart.objects.filter(user=request.user)
+    if request.method == 'POST':
+        form = CardForm(request.POST)
+        order.save()
+        for item in cart:
+            item.delete()
+        return redirect("payment_success")  # Move the return statement here
+    else:
+        form = CardForm()
+        return render(request, 'market/card_details.html', {'form': form, 'order': order})
+    
+def payment_success(request):
+    return render(request, 'market/payment_success.html')
+
+
+
+def payment_failure(request):
+    return render(request, "market/payment_failure.html")
