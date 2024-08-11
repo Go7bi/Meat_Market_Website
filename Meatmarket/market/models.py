@@ -48,3 +48,24 @@ class Favourite(models.Model):
 	user=models.ForeignKey(User,on_delete=models.CASCADE)
 	product=models.ForeignKey(Product,on_delete=models.CASCADE)
 	created_at=models.DateTimeField(auto_now_add=True)  
+
+class Order(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+    address = models.CharField(max_length=255)
+    payment_method = models.CharField(max_length=20)
+    total = models.FloatField(null=False, blank=False)
+    status = models.BooleanField(default=False, help_text="0-pending,1-completed")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+    
+class CardDetails(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    card_number = models.CharField(max_length=16)
+    expiration_date = models.DateField()
+    cvv = models.CharField(max_length=3)
+    cardholder_name = models.CharField(max_length=50)
