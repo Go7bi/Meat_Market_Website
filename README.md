@@ -28,17 +28,15 @@ Features:
 Technical Overview:
 
 1. Backend (Python):
-    - Framework: Flask or Django
-    - Database: MySQL or PostgreSQL
-    - API endpoints for:
-        - Product management
-        - User authentication and authorization
-        - Order management
-        - Payment processing
+    - HTML templates (e.g., card_details.html)
+    - CSS stylesheets (not shown in the code snippet)
+    - JavaScript code (not shown in the code snippet)
+    - Client-side rendering of the payment form and order details
 2. Frontend (HTML, CSS):
-    - Template engine: Jinja2 or Mustache
-    - CSS framework: Bootstrap or Tailwind CSS
-    - Responsive design for desktop and mobile devices
+    - Python (programming language)
+    - Django (web framework)
+    - SQL (database management)
+
 3. Database (SQL):
     - Tables for:
         - Products
