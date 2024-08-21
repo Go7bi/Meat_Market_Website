@@ -185,3 +185,21 @@ def payment_success(request):
 
 def payment_failure(request):
     return render(request, "market/payment_failure.html")
+
+def search_products(request):
+    if request.method == 'GET':
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            products = Product.objects.filter(name__icontains=query)
+            return render(request, 'market/search_results.html', {'products': products})
+        else:
+            return render(request, 'market/search.html', {'form': form})
+    else:
+        form = SearchForm()
+        return render(request, 'market/search.html', {'form': form})
+
+def search_results(request):
+    query = request.GET.get('query')
+    products = Product.objects.filter(name__icontains=query)
+    return render(request, 'market/search_results.html', {'products': products, 'query': query})
