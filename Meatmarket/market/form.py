@@ -32,3 +32,5 @@ class CardForm(forms.ModelForm):
             'cvv': forms.TextInput(attrs={'placeholder': 'XXX'}),
             'cardholder_name': forms.TextInput(attrs={'placeholder': 'Cardholder Name'})
         }
+class SearchForm(forms.Form):
+    query = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Search products'}))
