@@ -1,0 +1,10 @@
+{% extends 'market/layouts/main.html' %}
+
+{% block title %}Search | MeatMarket {% endblock title %}
+
+{% block content %}
+  <form method="get" action="{% url 'search_products' %}">
+    <input type="search" name="query" placeholder="Search products">
+    <button type="submit">Search</button>
+  </form>
+{% endblock content %}
