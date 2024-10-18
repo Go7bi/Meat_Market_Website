@@ -27,12 +27,12 @@ Features:
 
 Technical Overview:
 
-1. Backend (Python):
+1. Frontend:
     - HTML templates (e.g., card_details.html)
     - CSS stylesheets (not shown in the code snippet)
     - JavaScript code (not shown in the code snippet)
     - Client-side rendering of the payment form and order details
-2. Frontend (HTML, CSS):
+2. Backend:
     - Python (programming language)
     - Django (web framework)
     - SQL (database management)
